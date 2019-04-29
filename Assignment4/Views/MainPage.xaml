@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<views:MvxTabbedPage xmlns="http://xamarin.com/schemas/2014/forms" 
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+            xmlns:local="clr-namespace:Assignment4.Views"
+            xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+            x:Class="Assignment4.Views.MainPage">
+    <TabbedPage.Children>
+        <local:ItemsPage Title="Find it!" Icon="tab_feed.png" BindingContext="{Binding ItemsViewModel}" />
+        <local:AboutPage Title="All About!" Icon="tab_about.png" />
+    </TabbedPage.Children>
+</views:MvxTabbedPage>
