@@ -1,6 +1,6 @@
 # Assignment4
-Repo for Intermediate Mobile Apps Assignment four
 100 points
+
 For this assignment you will need to create a mapping application.
 I have created a starter app for your that is based on a Xamarin Forms tabbed application
 It has 2 pages, a generica item list and an about page
