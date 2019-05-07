@@ -7,5 +7,6 @@
     <TabbedPage.Children>
         <local:ItemsPage Title="Find it!" Icon="tab_feed.png" BindingContext="{Binding ItemsViewModel}" />
         <local:AboutPage Title="All About!" Icon="tab_about.png" />
+        <local:MainPage Title="Search it!" Icon="Directions.png" />
     </TabbedPage.Children>
 </views:MvxTabbedPage>

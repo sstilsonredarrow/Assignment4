@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<views:MvxContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms" 
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="Assignment4.Views.SearchPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="MenuDirections" Order="Primary" Icon="Directions.png" Priority="0" Command="{Binding GetDirectionsCommand}" />
+        <ToolbarItem Name="MenuStepByStep" Order="Primary" Icon="Steps.png" Text="Step-By-Step" Priority="1" Clicked="Handle_Steps" />
+    </ContentPage.ToolbarItems>
+        <StackLayout Orientation="Vertical" Padding="30">
+            <SearchBar x:Name="SearchBar" SearchCommand="{Binding SearchCommand}"
+                       SearchCommandParameter="{Binding Text, Source={x:Reference SearchBar}}" />
+            <maps:Map WidthRequest="320" HeightRequest="500"
+                      x:Name="map"
+                      IsShowingUser="true"
+                      MapType="Street" ItemsSource="{Binding PlacesOfInterest}">
+                <maps:Map.ItemTemplate>
+                    <DataTemplate>
+                        <maps:Pin Position="{Binding Position}"
+                                  Address="{Binding Address}"
+                                  Label="{Binding PlaceName}"
+                                  Clicked="Handle_Clicked" />
+                    </DataTemplate>
+                </maps:Map.ItemTemplate>
+            </maps:Map>
+        </StackLayout>
+</views:MvxContentPage>

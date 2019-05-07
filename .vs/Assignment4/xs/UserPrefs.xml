@@ -1,21 +1,46 @@
 ﻿<Properties StartupConfiguration="{896B547F-02FB-48C8-8BFE-DDEE55C55E44}|Default">
-  <MonoDevelop.Ide.ItemProperties.Assignment4.Android PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
-  <MonoDevelop.Ide.ItemProperties.Assignment4.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.160D485C-F43F-427A-B44F-95720BEB2942" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Assignment4.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
+  <MonoDevelop.Ide.ItemProperties.Assignment4.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.91A7EF32-864A-4844-8461-03E85FCCF544" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assignment4Core/Services/PlacesAPIService.cs">
+    <Files>
+      <File FileName="Assignment4/Views/MainPage.xaml" Line="10" Column="60" />
+      <File FileName="Assignment4/Views/SearchPage.xaml" Line="6" Column="47" />
+      <File FileName="Assignment4/Views/SearchPage.xaml.cs" Line="20" Column="59" />
+      <File FileName="Assignment4Core/ViewModels/SearchViewModel.cs" Line="11" Column="48" />
+      <File FileName="Assignment4Core/Models/MapDirections.cs" Line="95" Column="6" />
+      <File FileName="Assignment4Core/Models/SearchResults.cs" Line="81" Column="6" />
+      <File FileName="Assignment4Core/Models/Item.cs" Line="1" Column="1" />
+      <File FileName="Assignment4Core/ViewModels/DirectionsViewModel.cs" Line="31" Column="45" />
+      <File FileName="Assignment4Core/Helpers/HTMLStripper.cs" Line="19" Column="10" />
+      <File FileName="Assignment4Core/Helpers/LocationHelper.cs" Line="18" Column="55" />
+      <File FileName="Assignment4Core/Services/IPlacesAPIService.cs" Line="10" Column="50" />
+      <File FileName="Assignment4Core/Services/PlacesAPIService.cs" Line="4" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Assignment4" expanded="True">
             <Node name="Assignment4" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
               <Node name="Views" expanded="True">
-                <Node name="ItemsPage.xaml" selected="True" />
+                <Node name="SearchPage.xaml" expanded="True" />
               </Node>
             </Node>
             <Node name="Assignment4.Android" expanded="True" />
-            <Node name="Assignment4.iOS" expanded="True" />
+            <Node name="Assignment4.iOS" expanded="True">
+              <Node name="Packages" expanded="True" />
+            </Node>
             <Node name="Assignment4Core" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="Helpers" expanded="True" />
               <Node name="Models" expanded="True" />
-              <Node name="Services" expanded="True" />
+              <Node name="Services" expanded="True">
+                <Node name="PlacesAPIService.cs" selected="True" />
+              </Node>
               <Node name="ViewModels" expanded="True" />
             </Node>
           </Node>
