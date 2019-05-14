@@ -1,0 +1,215 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.0/",
+    "signature": "fa1018779e9225fe95959eaa55cb0ca4b2a1d21d"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.0": {},
+    ".NETStandard,Version=v2.0/": {
+      "Assignment4/1.0.0": {
+        "dependencies": {
+          "Assignment4Core": "1.0.0",
+          "MvvmCross.Forms": "6.2.3",
+          "NETStandard.Library": "2.0.3",
+          "Xamarin.Essentials": "1.1.0",
+          "Xamarin.Forms": "3.6.0.344457",
+          "Xamarin.Forms.Maps": "3.6.0.344457"
+        },
+        "runtime": {
+          "Assignment4.dll": {}
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "MvvmCross/6.2.3": {
+        "runtime": {
+          "lib/netstandard2.0/MvvmCross.dll": {
+            "assemblyVersion": "6.2.3.0",
+            "fileVersion": "6.2.3.0"
+          }
+        }
+      },
+      "MvvmCross.Forms/6.2.3": {
+        "dependencies": {
+          "MvvmCross": "6.2.3",
+          "Xamarin.Forms": "3.6.0.344457"
+        },
+        "runtime": {
+          "lib/netstandard2.0/MvvmCross.Forms.dll": {
+            "assemblyVersion": "6.2.3.0",
+            "fileVersion": "6.2.3.0"
+          }
+        }
+      },
+      "NETStandard.Library/2.0.3": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "Newtonsoft.Json/12.0.2": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.2.23222"
+          }
+        }
+      },
+      "PCLAppConfig/1.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/PCLAppConfig.FileSystemStream.Abstractions.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/netstandard2.0/PCLAppConfig.FileSystemStream.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/netstandard2.0/PCLAppConfig.dll": {
+            "assemblyVersion": "1.0.1.0",
+            "fileVersion": "1.0.1.0"
+          }
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Numerics.Vectors.dll": {
+            "assemblyVersion": "4.1.4.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
+      "Xamarin.Essentials/1.1.0": {
+        "dependencies": {
+          "System.Numerics.Vectors": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Essentials.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Xamarin.Forms/3.6.0.344457": {
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "Xamarin.Forms.Maps/3.6.0.344457": {
+        "dependencies": {
+          "Xamarin.Forms": "3.6.0.344457"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.Maps.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "Assignment4Core/1.0.0": {
+        "dependencies": {
+          "MvvmCross": "6.2.3",
+          "Newtonsoft.Json": "12.0.2",
+          "PCLAppConfig": "1.0.1",
+          "Xamarin.Essentials": "1.1.0",
+          "Xamarin.Forms.Maps": "3.6.0.344457"
+        },
+        "runtime": {
+          "Assignment4Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Assignment4/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "MvvmCross/6.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sqJ0K3mJanygqo5oc9ZG/8e+GH2D2UaPJhE9+8xyUT8uPn/Sp4XfO9pADzavcLO9cRUWpj72CNzNT6xt15vf9w==",
+      "path": "mvvmcross/6.2.3",
+      "hashPath": "mvvmcross.6.2.3.nupkg.sha512"
+    },
+    "MvvmCross.Forms/6.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-irfgfK5Rd6SxLCSQvQb+XGdRgpDZN9/HsYXLyfneRP8qZxtVq0u7bjZweQZ/uxsEJzTg1dkGc6os/4W15X79vA==",
+      "path": "mvvmcross.forms/6.2.3",
+      "hashPath": "mvvmcross.forms.6.2.3.nupkg.sha512"
+    },
+    "NETStandard.Library/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "path": "netstandard.library/2.0.3",
+      "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mtweBXPWhp1CMQATtBT7ZfMZrbZBTKfjGwz6Y75NwGjx/GztDaUnfw8GK9KZ2T4fDIqKJyDjc9Rxlw5+G2FcVA==",
+      "path": "newtonsoft.json/12.0.2",
+      "hashPath": "newtonsoft.json.12.0.2.nupkg.sha512"
+    },
+    "PCLAppConfig/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-f4Qvf1drPmNC4Lm8tbjU/hEaF/S5GNwdl4m2pa/23/vVlCjFtoKSER2cOygnQ6im4f/Pob1lC/2I9X2+U8DiBQ==",
+      "path": "pclappconfig/1.0.1",
+      "hashPath": "pclappconfig.1.0.1.nupkg.sha512"
+    },
+    "System.Numerics.Vectors/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MNcaYxUJvUcoXOa+jgKl/GDw/Mh+wMrxDjW4dre7qrp35LUGTjUBNtZsNjxsWX592ocdyqt1X5hMJB+5OStoYw==",
+      "path": "system.numerics.vectors/4.5.0",
+      "hashPath": "system.numerics.vectors.4.5.0.nupkg.sha512"
+    },
+    "Xamarin.Essentials/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AGismQb55pszEQ/ZIv9O1U2YyaF2gHdBdAUO79+biHf1s7AL2R++DIvmf7Z+wtfhZrB9wxhXAkOUuYHgpY6oTw==",
+      "path": "xamarin.essentials/1.1.0",
+      "hashPath": "xamarin.essentials.1.1.0.nupkg.sha512"
+    },
+    "Xamarin.Forms/3.6.0.344457": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YTPYiRg5q8Q1AgkjX9mx2/0wfCNyoSfztvvWw9HY4qM1lmOgkAxAbbtY8zi3fCPUXhfZrCAgRvJYNS8VM519kQ==",
+      "path": "xamarin.forms/3.6.0.344457",
+      "hashPath": "xamarin.forms.3.6.0.344457.nupkg.sha512"
+    },
+    "Xamarin.Forms.Maps/3.6.0.344457": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sqBYD98ODUGjth6s1wOgapk5dBcYnXh9wjZk7gqfw4VRaPmmjHFQbOTRoSrzUDOeuumZntfEyEFR9Nnu3EESrg==",
+      "path": "xamarin.forms.maps/3.6.0.344457",
+      "hashPath": "xamarin.forms.maps.3.6.0.344457.nupkg.sha512"
+    },
+    "Assignment4Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

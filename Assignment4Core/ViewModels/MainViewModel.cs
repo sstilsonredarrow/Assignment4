@@ -31,8 +31,7 @@ namespace Assignment4Core.ViewModels
         {
             var tasks = new List<Task>();
            // tasks.Add(_navigationService.Navigate<BlueViewModel>());
-          //  tasks.Add(_navigationService.Navigate<AboutViewModel>());
-            //tasks.Add(_navigationService.Navigate <ImageListViewModel>());
+            tasks.Add(_navigationService.Navigate <MapViewModel>());
             await Task.WhenAll(tasks);
         }
     }
