@@ -30,7 +30,7 @@ namespace Assignment4Core.ViewModels
         private async Task ShowInitialViewModels()
         {
             var tasks = new List<Task>();
-           // tasks.Add(_navigationService.Navigate<BlueViewModel>());
+           tasks.Add(_navigationService.Navigate<MapViewModel>());
           //  tasks.Add(_navigationService.Navigate<AboutViewModel>());
             //tasks.Add(_navigationService.Navigate <ImageListViewModel>());
             await Task.WhenAll(tasks);

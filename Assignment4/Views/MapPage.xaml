@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<views:MvxContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms" 
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="Assignment4.Views.MapPage">
+    <ContentPage.Content>
+    </ContentPage.Content>
+    <StackLayout Orientation="Vertical" Padding="30" VerticalOptions="StartAndExpand">
+        <Label Text="Search Type:"/>
+         <Picker x:Name="picky" ItemsSource="{Binding SearchOptions}" SelectedIndex="{Binding SelectedSearchType}"/>
+            <SearchBar x:Name="SearchBar" SearchCommand="{Binding SearchCommand}"
+                       SearchCommandParameter="{Binding Text, Source={x:Reference SearchBar}}"/>
+            <maps:Map WidthRequest="320" HeightRequest="500"
+                      x:Name="map"
+                      IsShowingUser="true"
+                      MapType="Street" ItemsSource="{Binding PlacesOfInterest}">
+                <maps:Map.ItemTemplate>
+                    <DataTemplate>
+                        <maps:Pin Position="{Binding Position}"
+                                  Address="{Binding Address}"
+                                  Label="{Binding PlaceName}"/>
+                    </DataTemplate>
+                </maps:Map.ItemTemplate>
+            </maps:Map>
+        </StackLayout>
+</views:MvxContentPage>
