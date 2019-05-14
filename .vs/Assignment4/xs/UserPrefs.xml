@@ -1,27 +1,18 @@
 ﻿<Properties StartupConfiguration="{896B547F-02FB-48C8-8BFE-DDEE55C55E44}|Default">
   <MonoDevelop.Ide.ItemProperties.Assignment4.Android PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
-  <MonoDevelop.Ide.ItemProperties.Assignment4.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.160D485C-F43F-427A-B44F-95720BEB2942" />
-  <MonoDevelop.Ide.Workbench>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="Assignment4" expanded="True">
-            <Node name="Assignment4" expanded="True">
-              <Node name="Views" expanded="True">
-                <Node name="ItemsPage.xaml" selected="True" />
-              </Node>
-            </Node>
-            <Node name="Assignment4.Android" expanded="True" />
-            <Node name="Assignment4.iOS" expanded="True" />
-            <Node name="Assignment4Core" expanded="True">
-              <Node name="Models" expanded="True" />
-              <Node name="Services" expanded="True" />
-              <Node name="ViewModels" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
+  <MonoDevelop.Ide.ItemProperties.Assignment4.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.4F6969AA-2525-4E2A-BF9B-AD4EF9464C94" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assignment4Core/ViewModels/ItemsViewModel.cs">
+    <Files>
+      <File FileName="Assignment4Core/ViewModels/ItemsViewModel.cs" Line="31" Column="42" />
+      <File FileName="Assignment4/Views/ItemsPage.xaml" Line="20" Column="62" />
+      <File FileName="Assignment4Core/Services/PlacesAPIService.cs" Line="36" Column="74" />
+      <File FileName="Assignment4Core/Services/IPlacesAPIService.cs" Line="11" Column="107" />
+      <File FileName="Assignment4/Views/ItemsPage.xaml.cs" Line="19" Column="1" />
+      <File FileName="Assignment4.iOS/Main.cs" Line="17" Column="1" />
+      <File FileName="Assignment4Core/Models/PlaceOfInterest.cs" Line="18" Column="30" />
+      <File FileName="Assignment4.iOS/AppDelegate.cs" Line="29" Column="40" />
+      <File FileName="Assignment4Core/App.cs" Line="9" Column="19" />
+    </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

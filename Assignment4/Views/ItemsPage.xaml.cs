@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
-using Assignment4.Views;
+using Xamarin.Forms.Maps;
+using Assignment4Core.ViewModels;
 
 namespace Assignment4.Views
 {
@@ -21,18 +14,14 @@ namespace Assignment4.Views
             //BindingContext = viewModel = new ItemsViewModel();
         }
 
-       
-        async void AddItem_Clicked(object sender, EventArgs e)
-        {
-            //await Navigation.PushModalAsync(new NavigationPage(new NewItemPage()));
-        }
-
         protected override void OnAppearing()
         {
             base.OnAppearing();
+            var position = (this.BindingContext.DataContext as ItemsViewModel).startPosition.Position;
+            map.MoveToRegion(MapSpan.FromCenterAndRadius(position, Distance.FromMiles(3)).WithZoom(10));
 
             //if (viewModel.Items.Count == 0)
-                //viewModel.LoadItemsCommand.Execute(null);
+            //viewModel.LoadItemsCommand.Execute(null);
         }
     }
 }

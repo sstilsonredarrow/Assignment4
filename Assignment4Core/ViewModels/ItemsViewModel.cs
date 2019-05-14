@@ -8,49 +8,73 @@ using MvvmCross.ViewModels;
 using MvvmCross.Commands;
 using Assignment4Core.Services;
 using System.Collections.Generic;
+using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 
 namespace Assignment4Core.ViewModels
 {
     public class ItemsViewModel : MvxViewModel
     {
-        public ObservableCollection<Item> Items { get; set; }
-        public IMvxCommand LoadItemsCommand { get; set; }
-        IDataStore<Item> _dataStore;
-        public string Text { get; set; }
+        public PlaceOfInterest startPosition { get; set; }
+        public ObservableCollection<PlaceOfInterest> startPositions { get; set; }
+        private ObservableCollection<PlaceOfInterest> _placesOfInterest;
+        private IPlacesAPIService _placesService;
+        public List<string> SearchOptions { get; set; }
+        public int SelectedSearchType { get; set; }
 
-        public ItemsViewModel(IDataStore<Item> dataStore)
+        public ItemsViewModel(IPlacesAPIService aPIService)
         {
-            Items = new ObservableCollection<Item>();
-            LoadItemsCommand = new MvxCommand(async () => await ExecuteLoadItemsCommand());
-            _dataStore = dataStore;
-
+            _placesService = aPIService;
+            startPosition = new PlaceOfInterest();
+            SearchOptions = new List<string>();
+            SearchOptions.Add("restaurant");
+            SearchOptions.Add("lodging");
+            SearchOptions.Add("car_rental");
+            SearchOptions.Add("art_gallery");
+            SearchOptions.Add("bank");
+            SearchOptions.Add("movie_theater");
+            SelectedSearchType = 0;
         }
 
-        async Task ExecuteLoadItemsCommand()
+        public ObservableCollection<PlaceOfInterest> PlacesOfInterest
         {
+            get { return _placesOfInterest; }
+            set { _placesOfInterest = value;  RaisePropertyChanged(nameof(PlacesOfInterest)); }
+        }
 
-            try
+        private MvxCommand<string> _searchCommand;
+        public IMvxCommand SearchCommand
+        {
+            get
             {
-                Items.Clear();
-                var items = await _dataStore.GetItemsAsync(true);
-                foreach (var item in items)
+                return _searchCommand ?? (_searchCommand = new MvxCommand<string>(async (text) =>
                 {
-                    Items.Add(item);
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex);
-            }
-            finally
-            {
-               
+                    Console.WriteLine($"Search: {text}");
+                    List<PlaceOfInterest> places = await _placesService.GetSearchResults(text, startPosition.Position, SearchOptions[SelectedSearchType]);
+                    if (places != null && places.Count > 0)
+                    {
+                        PlacesOfInterest.Clear();
+                        places.ForEach(r => PlacesOfInterest.Add(r));
+
+                        Device.BeginInvokeOnMainThread(async () =>
+                        {
+                            await RaisePropertyChanged();
+                        });
+                    }
+
+                }));
             }
         }
+
+
+
+
         public override async Task Initialize()
         {
             await base.Initialize();
-            await ExecuteLoadItemsCommand();
+            _placesOfInterest = new ObservableCollection<PlaceOfInterest>() { startPosition };
+            _placesOfInterest.ForEach(s => PlacesOfInterest.Add(s));
+            // startPosition = 
         }
     }
 }
