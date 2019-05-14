@@ -1,32 +1,11 @@
 ﻿<Properties StartupConfiguration="{896B547F-02FB-48C8-8BFE-DDEE55C55E44}|Default">
   <MonoDevelop.Ide.ItemProperties.Assignment4.Android PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
-  <MonoDevelop.Ide.ItemProperties.Assignment4.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.160D485C-F43F-427A-B44F-95720BEB2942" />
-  <MonoDevelop.Ide.Workbench>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="Assignment4" expanded="True">
-            <Node name="Assignment4" expanded="True">
-              <Node name="Views" expanded="True">
-                <Node name="ItemsPage.xaml" selected="True" />
-              </Node>
-            </Node>
-            <Node name="Assignment4.Android" expanded="True" />
-            <Node name="Assignment4.iOS" expanded="True" />
-            <Node name="Assignment4Core" expanded="True">
-              <Node name="Models" expanded="True" />
-              <Node name="Services" expanded="True" />
-              <Node name="ViewModels" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Assignment4.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.E34B1BC7-A603-4692-9E6C-0382EDDBB6D4" />
   <MultiItemStartupConfigurations />
 </Properties>
