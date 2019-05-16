@@ -6,7 +6,7 @@
             x:Class="Assignment4.Views.MainPage">
     <TabbedPage.Children>
         <local:ItemsPage Title="Find it!" Icon="tab_feed.png" BindingContext="{Binding ItemsViewModel}" />
-        <local:AboutPage Title="All About!" Icon="tab_about.png" />
-        <local:MainPage Title="Search it!" Icon="Directions.png" />
+        <local:AboutPage Title="All About!" Icon="tab_about.png" BindingContext="{Binding AboutViewModel}"/>
+        <local:SearchPage Title="Search it!" Icon="Directions.png" BindingContext="{Binding SearchViewModel}"/>
     </TabbedPage.Children>
 </views:MvxTabbedPage>

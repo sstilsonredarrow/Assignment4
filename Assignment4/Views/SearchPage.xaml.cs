@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 using Assignment4Core.ViewModels;
-using MvvmCross.Binding;
+using MvvmCross.Forms.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 
@@ -14,10 +15,16 @@ namespace Assignment4.Views
             InitializeComponent();
         }
 
+        public List<string> Categories = new List<string>(new string[] {
+                "restaurant",
+                "car_rentals",
+                "lodging"
+        });  
+
         void Handle_Clicked(object sender, System.EventArgs e)
         {
             Console.WriteLine("In the handle clicked");
-            (this.BindingContext.DataContext as SearchViewModel()).SelectedPin = sender as Pin;
+            (this.BindingContext.DataContext as SearchViewModel).SelectedPin = sender as Pin;
         }
 
         void Handle_Steps(object sender, System.EventArgs e)
@@ -39,7 +46,7 @@ namespace Assignment4.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            var position = (this.BindingContext.DataContext as MapViewModel).School.Position;
+            var position = (this.BindingContext.DataContext as SearchViewModel).PlaceSearching.Position;
             map.MoveToRegion(MapSpan.FromCenterAndRadius(position, Distance.FromMiles(3)).WithZoom(10));
         }
     }

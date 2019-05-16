@@ -31,12 +31,12 @@ namespace Assignment4Core.Services
             }
         }
 
-        public async Task<List<Restaurant>> GetSearchResults(string search, Position position)
+        public async Task<List<PlaceOfInterest>> GetSearchResults(string search, Position position, string searchType)
         {
             using (var client = new HttpClient())
             {
                 string baseAddr = ConfigurationManager.AppSettings["LocationSearchBaseURL"];
-                string type = "&type=restaurant";
+                string type = $"&type={searchType}";
                 string name = search;
                 string key = ConfigurationManager.AppSettings["APIKey"];
                 var fullAddr = $"{baseAddr}{position.Latitude},{position.Longitude}&radius=1500{type}&name={name}&key={key}";
@@ -45,11 +45,11 @@ namespace Assignment4Core.Services
                 string content = await response.Content.ReadAsStringAsync();
 
                 SearchResults result = JsonConvert.DeserializeObject<SearchResults>(content);
-                List<Restaurant> restaurants = new List<Restaurant>();
+                List<PlaceOfInterest> interests = new List<PlaceOfInterest>();
 
-                result.results.ForEach(r => restaurants.Add(new Restaurant(r)));
+                result.results.ForEach(r => interests.Add(new PlacesSearching(r, searchType)));
 
-                return restaurants;
+                return interests;
             }
         }
     }
