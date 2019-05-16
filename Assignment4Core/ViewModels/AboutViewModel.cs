@@ -37,7 +37,7 @@ namespace Assignment4.ViewModels
                 return _itemTappedCommand = _itemTappedCommand ??
                         new MvxCommand<PlacesSearching>(async item =>
                         {
-                            await _navigationService.Navigate<SearchViewModel, PlacesSearching>(item);
+                            //await _navigationService.Navigate<SearchViewModel, PlacesSearching>(item);
                         });
             }
         }

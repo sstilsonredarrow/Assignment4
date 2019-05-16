@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 using Assignment4Core.Models;
 using Assignment4Core.Services;
 using MvvmCross.Commands;
@@ -12,7 +13,7 @@ using Xamarin.Forms.Maps;
 
 namespace Assignment4Core.ViewModels
 {
-    public class SearchViewModel : MvxViewModel<PlacesSearching>
+    public class SearchViewModel : MvxViewModel
     {
         private ObservableCollection<PlaceOfInterest> _placesOfInterest;
         private ObservableCollection<PlacesSearching> _places;
@@ -95,9 +96,21 @@ namespace Assignment4Core.ViewModels
             }
         }
 
-        public override async void Prepare(PlacesSearching parameter)
+        //public override async void Prepare(PlacesSearching parameter)
+        //{
+        //    PlaceSearching = parameter;
+        //    var position = await Helpers.LocationHelper.Geocode(PlaceSearching.Address);
+        //    PlaceSearching.Position = position;
+        //    PlacesSearching = new ObservableCollection<PlacesSearching>() { PlaceSearching };
+        //    PlacesOfInterest = new ObservableCollection<PlaceOfInterest>();
+        //    PlacesSearching.ForEach(s => PlacesOfInterest.Add(s));
+        //}
+
+        public override async Task Initialize()
         {
-            PlaceSearching = parameter;
+            await base.Initialize();
+
+            //PlaceSearching = parameter;
             var position = await Helpers.LocationHelper.Geocode(PlaceSearching.Address);
             PlaceSearching.Position = position;
             PlacesSearching = new ObservableCollection<PlacesSearching>() { PlaceSearching };
