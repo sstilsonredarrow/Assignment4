@@ -5,7 +5,6 @@
             xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
             x:Class="Assignment4.Views.MainPage">
     <TabbedPage.Children>
-        <local:ItemsPage Title="Find it!" Icon="tab_feed.png" BindingContext="{Binding ItemsViewModel}" />
-        <local:AboutPage Title="All About!" Icon="tab_about.png" />
+        <local:MapPage Title="Map" Icon="tab_feed.png" BindingContext="{Binding MapViewModel}" />
     </TabbedPage.Children>
 </views:MvxTabbedPage>

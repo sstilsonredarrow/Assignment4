@@ -1,0 +1,22 @@
+/Users/NFlaig/Desktop/AssignmentFour/Assignment4Core/bin/Debug/netstandard2.0/app.config
+/Users/NFlaig/Desktop/AssignmentFour/Assignment4Core/bin/Debug/netstandard2.0/Assignment4Core.deps.json
+/Users/NFlaig/Desktop/AssignmentFour/Assignment4Core/bin/Debug/netstandard2.0/Assignment4Core.dll
+/Users/NFlaig/Desktop/AssignmentFour/Assignment4Core/bin/Debug/netstandard2.0/Assignment4Core.pdb
+/Users/NFlaig/Desktop/AssignmentFour/Assignment4Core/obj/Debug/netstandard2.0/Assignment4Core.csproj.CoreCompileInputs.cache
+/Users/NFlaig/Desktop/AssignmentFour/Assignment4Core/obj/Debug/netstandard2.0/Assignment4Core.AssemblyInfoInputs.cache
+/Users/NFlaig/Desktop/AssignmentFour/Assignment4Core/obj/Debug/netstandard2.0/Assignment4Core.AssemblyInfo.cs
+/Users/NFlaig/Desktop/AssignmentFour/Assignment4Core/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/NFlaig/Desktop/AssignmentFour/Assignment4Core/obj/Debug/netstandard2.0/Assignment4Core.dll
+/Users/NFlaig/Desktop/AssignmentFour/Assignment4Core/obj/Debug/netstandard2.0/Assignment4Core.pdb
+/Users/NFlaig/Desktop/AssignmentFour/Assignment4Core/obj/Debug/netstandard2.0/Assignment4Core.csprojAssemblyReference.cache
+/Users/NFlaig/Desktop/AssignmentFour copy/Assignment4Core/bin/Debug/netstandard2.0/app.config
+/Users/NFlaig/Desktop/AssignmentFour copy/Assignment4Core/bin/Debug/netstandard2.0/Assignment4Core.deps.json
+/Users/NFlaig/Desktop/AssignmentFour copy/Assignment4Core/bin/Debug/netstandard2.0/Assignment4Core.dll
+/Users/NFlaig/Desktop/AssignmentFour copy/Assignment4Core/bin/Debug/netstandard2.0/Assignment4Core.pdb
+/Users/NFlaig/Desktop/AssignmentFour copy/Assignment4Core/obj/Debug/netstandard2.0/Assignment4Core.csprojAssemblyReference.cache
+/Users/NFlaig/Desktop/AssignmentFour copy/Assignment4Core/obj/Debug/netstandard2.0/Assignment4Core.csproj.CoreCompileInputs.cache
+/Users/NFlaig/Desktop/AssignmentFour copy/Assignment4Core/obj/Debug/netstandard2.0/Assignment4Core.AssemblyInfoInputs.cache
+/Users/NFlaig/Desktop/AssignmentFour copy/Assignment4Core/obj/Debug/netstandard2.0/Assignment4Core.AssemblyInfo.cs
+/Users/NFlaig/Desktop/AssignmentFour copy/Assignment4Core/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/NFlaig/Desktop/AssignmentFour copy/Assignment4Core/obj/Debug/netstandard2.0/Assignment4Core.dll
+/Users/NFlaig/Desktop/AssignmentFour copy/Assignment4Core/obj/Debug/netstandard2.0/Assignment4Core.pdb

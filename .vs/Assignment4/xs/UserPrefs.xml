@@ -1,27 +1,26 @@
 ﻿<Properties StartupConfiguration="{896B547F-02FB-48C8-8BFE-DDEE55C55E44}|Default">
-  <MonoDevelop.Ide.ItemProperties.Assignment4.Android PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
-  <MonoDevelop.Ide.ItemProperties.Assignment4.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.160D485C-F43F-427A-B44F-95720BEB2942" />
-  <MonoDevelop.Ide.Workbench>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="Assignment4" expanded="True">
-            <Node name="Assignment4" expanded="True">
-              <Node name="Views" expanded="True">
-                <Node name="ItemsPage.xaml" selected="True" />
-              </Node>
-            </Node>
-            <Node name="Assignment4.Android" expanded="True" />
-            <Node name="Assignment4.iOS" expanded="True" />
-            <Node name="Assignment4Core" expanded="True">
-              <Node name="Models" expanded="True" />
-              <Node name="Services" expanded="True" />
-              <Node name="ViewModels" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
+  <MonoDevelop.Ide.ItemProperties.Assignment4.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
+  <MonoDevelop.Ide.ItemProperties.Assignment4.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8030C5A2-665E-4DF8-9C7B-12DC884A06A4" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assignment4/Views/MainPage.xaml">
+    <Files>
+      <File FileName="Assignment4Core/Models/Item.cs" Line="1" Column="1" />
+      <File FileName="Assignment4Core/Models/MapDirections.cs" Line="1" Column="1" />
+      <File FileName="Assignment4Core/Models/PlaceOfInterest.cs" Line="1" Column="1" />
+      <File FileName="Assignment4Core/Models/SearchLocation.cs" Line="1" Column="1" />
+      <File FileName="Assignment4Core/Models/SearchResults.cs" Line="1" Column="1" />
+      <File FileName="Assignment4Core/Services/IPlacesAPIService.cs" Line="1" Column="1" />
+      <File FileName="Assignment4Core/Services/IDataStore.cs" Line="1" Column="1" />
+      <File FileName="Assignment4Core/Services/PlacesAPIService.cs" Line="1" Column="1" />
+      <File FileName="Assignment4Core/Services/MockDataStore.cs" Line="1" Column="1" />
+      <File FileName="Assignment4Core/ViewModels/AboutViewModel.cs" Line="1" Column="1" />
+      <File FileName="Assignment4Core/ViewModels/ItemsViewModel.cs" Line="1" Column="1" />
+      <File FileName="Assignment4Core/ViewModels/MainViewModel.cs" Line="1" Column="1" />
+      <File FileName="Assignment4Core/ViewModels/MapViewModel.cs" Line="34" Column="67" />
+      <File FileName="Assignment4/Views/MapPage.xaml" Line="40" Column="1" />
+      <File FileName="Assignment4/Views/MainPage.xaml" Line="11" Column="23" />
+      <File FileName="Assignment4/Views/ItemsPage.xaml" Line="29" Column="24" />
+      <File FileName="Assignment4/Views/AboutPage.xaml" Line="68" Column="24" />
+    </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
