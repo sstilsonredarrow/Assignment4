@@ -16,34 +16,25 @@ namespace Assignment4Core.ViewModels
 {
     public class SearchViewModel : MvxViewModel
     {
-        private ObservableCollection<PlaceOfInterest> _placesOfInterest;
-        private ObservableCollection<PlacesSearching> _places;
-        private IPlacesAPIService _placesService;
         public Pin SelectedPin { get; set; }
-        private IMvxNavigationService _navigationService;
+        public PlaceOfInterest CurrentLocation { get; set; }
+        private ObservableCollection<PlaceOfInterest> _placesOfInterest;
+        private IPlacesAPIService _placesService;
+        public Position StartPosition { get; set; }
+        public List<string> SearchFilters { get; set; }
+        public int selectedSearch;
         private MvxCommand<string> _searchCommand;
-        private MvxCommand _getDirectionsCommand;
-        public PlacesSearching PlaceSearching { get; set; }
-        public string Address => PlaceSearching.Address;
-        public string Description => PlaceSearching.PlaceName;
-        public string category;
 
-        public SearchViewModel(IMvxNavigationService navigationService, IPlacesAPIService placesService)
+        public SearchViewModel(IPlacesAPIService placesService)
         {
-            _navigationService = navigationService;
             _placesService = placesService;
-            Result result = new Result();
-            result.geometry = new Geometry();
-            result.geometry.location = new Location();
-            result.geometry.location.lat = 44.52512;
-            result.geometry.location.lng = -89.58554;
-            result.name = "MSTC";
-            result.vicinity = "1001 Center Point Drive, Stevens Point, WI 54481";
-            PlaceSearching = new PlacesSearching(result, "school");
-        }
-
-        public SearchViewModel()
-        {
+            StartPosition = new Position(44.52512, -89.58554);
+            SearchFilters = new List<string>();
+            SearchFilters.Add("restaurant");
+            SearchFilters.Add("car_rental");
+            SearchFilters.Add("lodging");
+            // Selected search by int idea from Teegan Kennedy.
+            SelectedSearch = 0;
         }
 
         public ObservableCollection<PlaceOfInterest> PlacesOfInterest
@@ -52,22 +43,10 @@ namespace Assignment4Core.ViewModels
             set { _placesOfInterest = value; RaisePropertyChanged(nameof(PlacesOfInterest)); }
         }
 
-        public ObservableCollection<PlacesSearching> PlacesSearching
+        public int SelectedSearch
         {
-            get { return _places; }
-            set { _places = value; RaisePropertyChanged(nameof(PlacesSearching)); }
-        }
-
-        public string Category
-        {
-            get
-            {
-                return category;
-            }
-            set
-            {
-                category = value;
-            }
+            get { return selectedSearch; }
+            set { selectedSearch = value; RaisePropertyChanged(nameof(SelectedSearch)); }
         }
 
         public IMvxCommand SearchCommand
@@ -79,39 +58,12 @@ namespace Assignment4Core.ViewModels
                     try
                     {
                         Console.WriteLine($"Search: {text}");
-                        List<PlaceOfInterest> interest = await _placesService.GetSearchResults(text, PlacesSearching[0].Position, "restaurant");
-                        List<PlaceOfInterest> maybe = await _placesService.GetSearchResults(text, PlacesSearching[0].Position, "car_rental");
-                        List<PlaceOfInterest> possible = await _placesService.GetSearchResults(text, PlacesSearching[0].Position, "lodging");
+                        List<PlaceOfInterest> interest = await _placesService.GetSearchResults(text, PlacesOfInterest[0].Position, SearchFilters[SelectedSearch]);
 
                         if (interest != null && interest.Count > 0)
                         {
                             PlacesOfInterest.Clear();
                             interest.ForEach(r => PlacesOfInterest.Add(r));
-                            PlacesSearching.ForEach(s => PlacesOfInterest.Add(s));
-
-                            Device.BeginInvokeOnMainThread(async () =>
-                            {
-                                await RaisePropertyChanged();
-                            });
-                        }
-
-                        if (maybe != null && maybe.Count > 0)
-                        {
-                            PlacesOfInterest.Clear();
-                            maybe.ForEach(r => PlacesOfInterest.Add(r));
-                            PlacesSearching.ForEach(s => PlacesOfInterest.Add(s));
-
-                            Device.BeginInvokeOnMainThread(async () =>
-                            {
-                                await RaisePropertyChanged();
-                            });
-                        }
-
-                        if (possible != null && possible.Count > 0)
-                        {
-                            PlacesOfInterest.Clear();
-                            possible.ForEach(r => PlacesOfInterest.Add(r));
-                            PlacesSearching.ForEach(s => PlacesOfInterest.Add(s));
 
                             Device.BeginInvokeOnMainThread(async () =>
                             {
@@ -127,49 +79,17 @@ namespace Assignment4Core.ViewModels
             }
         }
 
-
-
-        public IMvxCommand GetDirectionsCommand
-        {
-            get
-            {
-                return _getDirectionsCommand ?? (_getDirectionsCommand = new MvxCommand(async () =>
-                {
-                    if (SelectedPin == null || SelectedPin.Position == PlacesSearching[0].Position)
-                    {
-                        return;
-                    }
-                    var result = await _placesService.GetDirections(PlacesSearching[0].Position, SelectedPin.Position);
-                    Console.WriteLine("results returned");
-                    Device.BeginInvokeOnMainThread(async () =>
-                    {
-                        await RaisePropertyChanged();
-                        await _navigationService.Navigate<DirectionsViewModel, RootDirections>(result);
-                    });
-                }));
-            }
-        }
-
-        //public override async void Prepare(PlacesSearching parameter)
-        //{
-        //    PlaceSearching = parameter;
-        //    var position = await Helpers.LocationHelper.Geocode(PlaceSearching.Address);
-        //    PlaceSearching.Position = position;
-        //    PlacesSearching = new ObservableCollection<PlacesSearching>() { PlaceSearching };
-        //    PlacesOfInterest = new ObservableCollection<PlaceOfInterest>();
-        //    PlacesSearching.ForEach(s => PlacesOfInterest.Add(s));
-        //}
-
         public override async Task Initialize()
         {
+            // Organization pattern idea from Teegan Kennedy.
             await base.Initialize();
-
-            //PlaceSearching = parameter;
-            var position = await Helpers.LocationHelper.Geocode(PlaceSearching.Address);
-            PlaceSearching.Position = position;
-            PlacesSearching = new ObservableCollection<PlacesSearching>() { PlaceSearching };
-            PlacesOfInterest = new ObservableCollection<PlaceOfInterest>();
-            PlacesSearching.ForEach(s => PlacesOfInterest.Add(s));
+            _placesOfInterest = new ObservableCollection<PlaceOfInterest>();
+            CurrentLocation = new PlaceOfInterest();
+            CurrentLocation.Position = new Position(44.52512, -89.58554);
+            CurrentLocation.Address = "1001 Center Point Dr, Stevens Point, WI 54481";
+            CurrentLocation.PlaceName = "Midstate Technical College";
+            _placesOfInterest.Add(CurrentLocation);
+            await RaisePropertyChanged(nameof(PlacesOfInterest));
         }
     }
 }

@@ -40,8 +40,8 @@ namespace Assignment4.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            var position = (this.BindingContext.DataContext as SearchViewModel).PlaceSearching.Position;
-            map.MoveToRegion(MapSpan.FromCenterAndRadius(position, Distance.FromMiles(3)).WithZoom(10));
+            var position = (this.BindingContext.DataContext as SearchViewModel).StartPosition;
+            map.MoveToRegion(MapSpan.FromCenterAndRadius(position, Distance.FromMiles(2)).WithZoom(10));
         }
     }
 }
