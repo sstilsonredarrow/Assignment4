@@ -13,14 +13,8 @@ namespace Assignment4.Views
         public SearchPage()
         {
             InitializeComponent();
-        }
-
-        public List<string> Categories = new List<string>(new string[] {
-                "restaurant",
-                "car_rentals",
-                "lodging"
-        });  
-
+        } 
+        
         void Handle_Clicked(object sender, System.EventArgs e)
         {
             Console.WriteLine("In the handle clicked");

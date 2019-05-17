@@ -1,0 +1,64 @@
+﻿<Properties StartupConfiguration="{896B547F-02FB-48C8-8BFE-DDEE55C55E44}|Default">
+  <MonoDevelop.Ide.ItemProperties.Assignment4.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
+  <MonoDevelop.Ide.ItemProperties.Assignment4.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.91A7EF32-864A-4844-8461-03E85FCCF544" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assignment4Core/Services/PlacesAPIService.cs">
+    <Files>
+      <File FileName="Assignment4/Views/SearchPage.xaml.cs" Line="38" Column="10" />
+      <File FileName="Assignment4Core/ViewModels/SearchViewModel.cs" Line="80" Column="80" />
+      <File FileName="Assignment4.iOS/Main.cs" Line="23" Column="1" />
+      <File FileName="Assignment4Core/App.cs" Line="21" Column="1" />
+      <File FileName="Assignment4Core/Services/PlacesAPIService.cs" Line="34" Column="50" />
+      <File FileName="Assignment4/Views/SearchPage.xaml" Line="12" Column="74" />
+      <File FileName="Assignment4Core/Models/SearchResults.cs" Line="40" Column="5" />
+      <File FileName="Assignment4Core/Models/PlacesSearching.cs" Line="12" Column="1" />
+      <File FileName="Assignment4Core/Services/IPlacesAPIService.cs" Line="12" Column="40" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Assignment4" expanded="True">
+            <Node name="Assignment4" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="AboutPage.xaml" expanded="True" />
+                <Node name="ItemsPage.xaml" expanded="True" />
+                <Node name="MainPage.xaml" expanded="True" />
+                <Node name="SearchPage.xaml" expanded="True" />
+              </Node>
+              <Node name="App.xaml" expanded="True" />
+            </Node>
+            <Node name="Assignment4.Android" expanded="True">
+              <Node name="Resources" expanded="True">
+                <Node name="drawable" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="Assignment4.iOS" expanded="True">
+              <Node name="Resources" expanded="True" />
+            </Node>
+            <Node name="Assignment4Core" expanded="True">
+              <Node name="Helpers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Services" expanded="True">
+                <Node name="PlacesAPIService.cs" selected="True" />
+              </Node>
+              <Node name="ViewModels" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/byusten/source/repos/AssignmentFour/Assignment4/Assignment4Core/Services/PlaceGetter.cs" relfile="Assignment4Core/Services/PlaceGetter.cs" line="18" column="1" />
+      <Breakpoint file="/Users/byusten/source/repos/AssignmentFour/Assignment4/Assignment4.iOS/Main.cs" relfile="Assignment4.iOS/Main.cs" line="22" column="1" />
+      <Breakpoint file="/Users/byusten/source/repos/AssignmentFour/Assignment4/Assignment4Core/ViewModels/SearchViewModel.cs" relfile="Assignment4Core/ViewModels/SearchViewModel.cs" line="80" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

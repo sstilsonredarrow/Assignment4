@@ -17,4 +17,12 @@
     <Folder Include="Services\" />
     <Folder Include="Helpers\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="app.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>

@@ -17,8 +17,8 @@ namespace Assignment4Core
             Mvx.IoCProvider.RegisterType<IDataStore<Item>, MockDataStore>();
             Mvx.IoCProvider.RegisterType<IPlacesAPIService, PlacesAPIService>();
             Mvx.IoCProvider.RegisterType<IPlaceGetter, PlaceGetter>();
-            //Assembly assembly = typeof(App).Assembly;
-            //ConfigurationManager.Initialise(assembly.GetManifestResourceStream("Assignmen4Core.app.config"));
+            Assembly assembly = typeof(App).Assembly;
+            ConfigurationManager.Initialise(assembly.GetManifestResourceStream("Assignment4Core.app.config"));
             RegisterAppStart<MainViewModel>();
         }
     }

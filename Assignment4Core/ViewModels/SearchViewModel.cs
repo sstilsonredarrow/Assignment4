@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Threading.Tasks;
 using Assignment4Core.Models;
 using Assignment4Core.Services;
@@ -25,6 +26,7 @@ namespace Assignment4Core.ViewModels
         public PlacesSearching PlaceSearching { get; set; }
         public string Address => PlaceSearching.Address;
         public string Description => PlaceSearching.PlaceName;
+        public string category;
 
         public SearchViewModel(IMvxNavigationService navigationService, IPlacesAPIService placesService)
         {
@@ -40,6 +42,10 @@ namespace Assignment4Core.ViewModels
             PlaceSearching = new PlacesSearching(result, "school");
         }
 
+        public SearchViewModel()
+        {
+        }
+
         public ObservableCollection<PlaceOfInterest> PlacesOfInterest
         {
             get { return _placesOfInterest; }
@@ -52,28 +58,76 @@ namespace Assignment4Core.ViewModels
             set { _places = value; RaisePropertyChanged(nameof(PlacesSearching)); }
         }
 
+        public string Category
+        {
+            get
+            {
+                return category;
+            }
+            set
+            {
+                category = value;
+            }
+        }
+
         public IMvxCommand SearchCommand
         {
             get
             {
                 return _searchCommand ?? (_searchCommand = new MvxCommand<string>(async (text) =>
                 {
-                    Console.WriteLine($"Search: {text}");
-                    List<PlaceOfInterest> interest = await _placesService.GetSearchResults(text, PlacesSearching[0].Position, PlacesSearching[0].CategoryType);
-                    if (interest != null && interest.Count > 0)
+                    try
                     {
-                        PlacesOfInterest.Clear();
-                        interest.ForEach(r => PlacesOfInterest.Add(r));
-                        PlacesSearching.ForEach(s => PlacesOfInterest.Add(s));
+                        Console.WriteLine($"Search: {text}");
+                        List<PlaceOfInterest> interest = await _placesService.GetSearchResults(text, PlacesSearching[0].Position, "restaurant");
+                        List<PlaceOfInterest> maybe = await _placesService.GetSearchResults(text, PlacesSearching[0].Position, "car_rental");
+                        List<PlaceOfInterest> possible = await _placesService.GetSearchResults(text, PlacesSearching[0].Position, "lodging");
 
-                        Device.BeginInvokeOnMainThread(async () =>
+                        if (interest != null && interest.Count > 0)
                         {
-                            await RaisePropertyChanged();
-                        });
+                            PlacesOfInterest.Clear();
+                            interest.ForEach(r => PlacesOfInterest.Add(r));
+                            PlacesSearching.ForEach(s => PlacesOfInterest.Add(s));
+
+                            Device.BeginInvokeOnMainThread(async () =>
+                            {
+                                await RaisePropertyChanged();
+                            });
+                        }
+
+                        if (maybe != null && maybe.Count > 0)
+                        {
+                            PlacesOfInterest.Clear();
+                            maybe.ForEach(r => PlacesOfInterest.Add(r));
+                            PlacesSearching.ForEach(s => PlacesOfInterest.Add(s));
+
+                            Device.BeginInvokeOnMainThread(async () =>
+                            {
+                                await RaisePropertyChanged();
+                            });
+                        }
+
+                        if (possible != null && possible.Count > 0)
+                        {
+                            PlacesOfInterest.Clear();
+                            possible.ForEach(r => PlacesOfInterest.Add(r));
+                            PlacesSearching.ForEach(s => PlacesOfInterest.Add(s));
+
+                            Device.BeginInvokeOnMainThread(async () =>
+                            {
+                                await RaisePropertyChanged();
+                            });
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
                     }
                 }));
             }
         }
+
+
 
         public IMvxCommand GetDirectionsCommand
         {

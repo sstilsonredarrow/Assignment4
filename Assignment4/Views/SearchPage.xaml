@@ -9,7 +9,15 @@
         <ToolbarItem Name="MenuStepByStep" Order="Primary" Icon="Steps.png" Text="Step-By-Step" Priority="1" Clicked="Handle_Steps" />
     </ContentPage.ToolbarItems>
         <StackLayout Orientation="Vertical" Padding="30">
-            <Picker x:Name="SearchType" Title="Select Category to Search" ItemsSource="{Binding Categories}" />
+            <Picker x:Name="SearchType" Title="Select Category to Search">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Restaurants</x:String>
+                        <x:String>Car Rentals</x:String>
+                        <x:String>Lodging</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
             <SearchBar x:Name="SearchBar" SearchCommand="{Binding SearchCommand}"
                        SearchCommandParameter="{Binding Text, Source={x:Reference SearchBar}}" />
             <maps:Map WidthRequest="320" HeightRequest="500"
